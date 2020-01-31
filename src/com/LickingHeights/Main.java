@@ -41,8 +41,11 @@ L = 1000 to 100,000,000 years (which will last somewhere between 1000 and 100,00
         System.out.println("Stars with planets will have between 1 and 5 capable of life ( 1 to 5)");
         numberOfExoplanets = keyboard.nextInt();
 
-        System.out.println("What Percent of these planets will develop life (0-100%)");
+        System.out.println("What Percent of these planets will develop life? (0-100%)");
         f_l = keyboard.nextInt();
+
+        System.out.println("What percent of these will develop intelligent life? (0-100%)");
+        f_i = keyboard.nextInt();
 
         N = rStar * f_p * numberOfExoplanets * f_l * f_i * f_c * L;
 
