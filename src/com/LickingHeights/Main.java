@@ -35,6 +35,9 @@ L = 1000 to 100,000,000 years (which will last somewhere between 1000 and 100,00
         System.out.println("How many stars are formed every year in our galaxy?");
         rStar = keyboard.nextInt();
 
+        System.out.println("How many of these stars produce planets? (0.2 to 0.5)");
+        f_p = keyboard.nextInt();
+
         N = rStar * f_p * numberOfExoplanets * f_l * f_i * f_c * L;
 
         System.out.println("The number of intelligent species that are out there \n" +
