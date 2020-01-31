@@ -47,6 +47,9 @@ L = 1000 to 100,000,000 years (which will last somewhere between 1000 and 100,00
         System.out.println("What percent of these will develop intelligent life? (0-100%)");
         f_i = keyboard.nextInt();
 
+        System.out.println("What percent of these will be able to communicate? (0-100%)");
+        f_c = keyboard.nextInt();
+
         N = rStar * f_p * numberOfExoplanets * f_l * f_i * f_c * L;
 
         System.out.println("The number of intelligent species that are out there \n" +
