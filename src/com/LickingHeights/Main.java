@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
+        drakeEquation();
 
     }
 
-    public static void drakeEquation(){
+    public static void drakeEquation() {
 /*Drake equation
 N = number of intelligent species that can communicate with us
 R∗ = 1 yr−1 (1 star formed per year, on the average over the life of the galaxy; this was regarded as conservative)
@@ -20,7 +20,7 @@ fi = 1 (100% of which will develop intelligent life)
 fc = 0.1 to 0.2 (10–20% of which will be able to communicate)
 L = 1000 to 100,000,000 years (which will last somewhere between 1000 and 100,000,000 years)
  */
-        int N;
+        double N;
         int rStar;
         double f_p;
         int numberOfExoplanets;
@@ -32,31 +32,32 @@ L = 1000 to 100,000,000 years (which will last somewhere between 1000 and 100,00
         Scanner keyboard;
         keyboard = new Scanner(System.in);
 
-        System.out.println("How many stars are formed every year in our galaxy? (1)");
+        System.out.println("How many stars are formed every year in our galaxy? (1 to 7)");
         rStar = keyboard.nextInt();
 
         System.out.println("How many of these stars produce planets? (0.2 to 0.5)");
-        f_p = keyboard.nextInt();
+        f_p = keyboard.nextDouble();
 
-        System.out.println("Stars with planets will have between 1 and 5 capable of life ( 1 to 5)");
+        System.out.println("Stars with planets will have between 1 and 5 capable of life (1 to 5)");
         numberOfExoplanets = keyboard.nextInt();
 
-        System.out.println("What Percent of these planets will develop life? (0-100%)");
-        f_l = keyboard.nextInt();
+        System.out.println("What Percent of these planets will develop life? (0.00 to 1.00)");
+        f_l = keyboard.nextDouble();
 
-        System.out.println("What percent of these will develop intelligent life? (0-100%)");
-        f_i = keyboard.nextInt();
+        System.out.println("What percent of these will develop intelligent life? (0.00 to 1.00)");
+        f_i = keyboard.nextDouble();
 
-        System.out.println("What percent of these will be able to communicate? (0-100%)");
-        f_c = keyboard.nextInt();
+        System.out.println("What percent of these will be able to communicate? (0.00 to 1.00)");
+        f_c = keyboard.nextDouble();
 
-        System.out.println("How long will these civilizations last? (1,000 to 1000,000,000 years)");
+        System.out.println("How long will these civilizations last? (1,000 to 100,000,000 years)");
         L = keyboard.nextInt();
 
         N = rStar * f_p * numberOfExoplanets * f_l * f_i * f_c * L;
 
         System.out.println("The number of intelligent species that are out there \n" +
-                "that can communicated with us is: " + N);
+                "that can communicate with us is: " + N + " species.");
+
 
     }
 
